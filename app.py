@@ -43,6 +43,7 @@ state_violent_crime_totals = state_crime_totals.groupby('State')['ViolentCrime']
 state_crime_totals.head()
 # 构建Dash应用
 app = dash.Dash(__name__)
+server = app.server
 
 # 地图展示每个州的犯罪数量
 map_fig = px.choropleth(state_violent_crime_totals, 
